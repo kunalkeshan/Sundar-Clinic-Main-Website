@@ -1,5 +1,4 @@
 import { defineField, defineType } from "sanity";
-import { baseLanguage } from "../lib/locale";
 
 export default defineType({
   name: "maintenance-mode",
@@ -14,9 +13,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "maintenanceMessage",
+      name: "message",
       title: "Maintenance Message",
-      type: "localeText",
+      type: "text",
       description:
         "The message to display to users when the site is in maintenance mode.",
       validation: (Rule) => Rule.required(),
@@ -31,7 +30,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      subtitle: `maintenanceMessage.${baseLanguage?.id}`,
+      subtitle: `message`,
     },
     prepare({ subtitle }) {
       return {
