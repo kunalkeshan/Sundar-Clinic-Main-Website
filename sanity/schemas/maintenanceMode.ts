@@ -31,12 +31,11 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: `isMaintenanceMode`,
       subtitle: `maintenanceMessage.${baseLanguage?.id}`,
     },
-    prepare({ title, subtitle }) {
+    prepare({ subtitle }) {
       return {
-        title,
+        title: "Maintenance Mode",
         subtitle,
       };
     },
