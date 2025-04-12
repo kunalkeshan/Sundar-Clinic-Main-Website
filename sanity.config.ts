@@ -29,7 +29,7 @@ export default defineConfig({
     deskTool({
       structure(S, context) {
         return S.list()
-          .title("Sanity Love Content")
+          .title("Sundar Clinic CMS")
           .items([
             ...schema.types
               .filter((type) => !EXCLUDED_TYPES.includes(type.name))
